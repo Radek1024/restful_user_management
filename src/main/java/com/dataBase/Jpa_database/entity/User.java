@@ -1,9 +1,13 @@
 package com.dataBase.Jpa_database.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
-//@Table(name = "users_db")
 public class User {
 
     @Id

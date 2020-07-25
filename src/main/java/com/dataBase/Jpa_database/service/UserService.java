@@ -2,18 +2,20 @@ package com.dataBase.Jpa_database.service;
 
 import com.dataBase.Jpa_database.entity.User;
 import com.dataBase.Jpa_database.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
+//@RequiredArgsConstructor
 public class UserService {
 
     public UserRepository userRepository;
 
-    @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository){
         this.userRepository = userRepository;
     }
 
@@ -21,7 +23,8 @@ public class UserService {
         List<User> users = new ArrayList<>();
         userRepository.findAll()
                 .forEach(users::add);
-        return users;
+
+        return users.size() != 0 ? users : users;
     }
 
     public void deleteUser(Integer id) {
