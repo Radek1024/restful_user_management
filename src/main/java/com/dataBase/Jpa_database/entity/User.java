@@ -1,20 +1,24 @@
 package com.dataBase.Jpa_database.entity;
 
+import lombok.*;
+
 import javax.persistence.*;
 
 @Entity
-//@Table(name = "users_db")
+@NoArgsConstructor
+@RequiredArgsConstructor
+@Data
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String name;
-    private String lastName;
-    private String city;
-    private String address;
+    private @NonNull String name;
+    private @NonNull String lastName;
+    private @NonNull String city;
+    private @NonNull String address;
 
-    public User() {
+    /*public User() {
     }
 
     public User(String name, String lastName, String city, String address) {
@@ -69,5 +73,5 @@ public class User {
                 ", city='" + city + '\'' +
                 ", address='" + address + '\'' +
                 '}';
-    }
+    }*/
 }

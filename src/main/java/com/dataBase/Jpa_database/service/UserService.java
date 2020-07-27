@@ -2,6 +2,7 @@ package com.dataBase.Jpa_database.service;
 
 import com.dataBase.Jpa_database.entity.User;
 import com.dataBase.Jpa_database.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
