@@ -2,6 +2,7 @@ package com.dataBase.Jpa_database.controller;
 
 import com.dataBase.Jpa_database.entity.User;
 import com.dataBase.Jpa_database.service.UserService;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
+@NoArgsConstructor
 public class UserController {
 
     private UserService userService;
